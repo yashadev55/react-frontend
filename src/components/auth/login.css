@@ -37,21 +37,30 @@
 .signInForm {
     text-align: right;
 }
+.signInForm input {
+    height: 20px;
+}
 .password {
     margin-top: 10px;
 }
 .signInBtnContainer {
-    margin-top: 70px;
+    margin: 70px auto;
+    width: 160px;
 }
 .signInBtn {
-    border: 2px solid #FECC17;
-    padding: 10px 45px;
-    background: #1D9129 none;
-    color: #FECC17;
+    border: none;
+    border-radius: 20px;
+    background: #2FB53D none;
+    color: #ffffff;
     font-weight: bold;
+    font-size: 16px;
+    width: 160px;
+    height: 40px;
 }
 .signInBtn:hover {
-    border: 2px solid #1D9129;
-    background: #FECC17 none;
-    color: #1D9129;
+    background: #1D9129 none;
+}
+.errorDiv {
+    margin-top: 20px;
+    white-space: nowrap;
 }
