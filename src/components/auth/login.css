@@ -1,0 +1,57 @@
+#tsparticles {
+    height: 100vh;
+}
+.signIn {
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    height: 400px;
+    padding: 40px;
+    border: 2px solid #FECC17;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #2FB53D;
+}
+.signInLogo {
+    color: #1D9129;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.signInLogo i {
+    font-size: 40px;
+}
+.signInLogo h1 {
+    margin: 0;
+}
+.signInText {
+    margin-top: 40px;
+}
+.signInFormContainer {
+    margin-top: 40px;
+    width: 280px;
+}
+.signInForm {
+    text-align: right;
+}
+.password {
+    margin-top: 10px;
+}
+.signInBtnContainer {
+    margin-top: 70px;
+}
+.signInBtn {
+    border: 2px solid #FECC17;
+    padding: 10px 45px;
+    background: #1D9129 none;
+    color: #FECC17;
+    font-weight: bold;
+}
+.signInBtn:hover {
+    border: 2px solid #1D9129;
+    background: #FECC17 none;
+    color: #1D9129;
+}
