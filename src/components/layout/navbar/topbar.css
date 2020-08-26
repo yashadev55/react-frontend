@@ -1,0 +1,14 @@
+.topbarContainer {
+    width: 100%;
+    height: 70px;
+    background-color: #2FB53D;
+    display: flex;
+}
+.userInfo {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.userInfo span {
+    margin-left: 20px;
+}
