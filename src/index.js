@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware, compose } from 'redux'
-import { Provider } from 'react-redux'
+import { Provider, useSelector } from 'react-redux'
 import thunk from 'redux-thunk'
 import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-firestore'
-import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase'
+import { ReactReduxFirebaseProvider, getFirebase, isLoaded } from 'react-redux-firebase'
 import fbConfig from './config/fbConfig'
 import firebase from 'firebase/app'
 import rootReducer from "./store/reducers/rootReducer";
@@ -24,19 +24,19 @@ const rrfProps = {
     firebase,
     config: fbConfig,
     dispatch: store.dispatch,
-    createFirestoreInstance
+    createFirestoreInstance,
+    userProfile: 'users',
+    presence: 'presence',
+    sessions: 'sessions'
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-        <ReactReduxFirebaseProvider {...rrfProps}>
-            <App />
-        </ReactReduxFirebaseProvider>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function AuthIsLoaded({ children }) {
+    const auth = useSelector(state => state.firebase.auth)
+    if (!isLoaded(auth)) return <div>Loading...</div>;
+    return children
+}
+
+ReactDOM.render(<Provider store={store}> <ReactReduxFirebaseProvider {...rrfProps}> <AuthIsLoaded><App /> </AuthIsLoaded></ReactReduxFirebaseProvider></Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

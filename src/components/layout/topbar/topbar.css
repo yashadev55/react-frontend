@@ -1,0 +1,45 @@
+.topbarContainer {
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+.userInfo {
+    color: #4C4C4C;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 40px;
+}
+.userInfo span {
+    margin-left: 20px;
+}
+.userActions {
+    margin-top: 15px;
+    width: 300px;
+}
+.userActions button {
+    color: #4C4C4C;
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 20px;
+    background: none;
+    border: none;
+    outline: none;
+}
+.userActions button:hover {
+    color: #828282;
+}
+
+@media (max-width: 375px) {
+    .userActions button {
+        margin: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .userInfo {
+        margin: 0;
+    }
+}
