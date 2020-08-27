@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './navbar.css'
 import 'antd/dist/antd.css'
 import { Menu } from "antd";
-import {CompassOutlined} from "@ant-design/icons";
 
 class Navbar extends Component{
 
